@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+   <div class="login-card">
+     <div class="logo-container">
+       <img src="logo.jpg" alt="Government Logo" class="logo">
+     </div>
+     <h2>Login to Your Account</h2>
+        
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="input-group">
+            <label for="role">Login As</label>
+            <select id="role">
+                <option value="user">User</option>
+                <option value="authority">Authority</option>
+            </select>
+        </div>
+        <button onclick="login()">Login</button>
+        <p id="error-message"></p>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

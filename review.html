@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate & Review Delhi Places</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1>SafeGuard - Rate & Review</h1>
+    <div class="nav-buttons">
+        <button class="profile-btn">👤</button>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <a href="userhome.html"><img src="homelogo.jpg" alt="home" class="icon"> Home</a>
+    <a href="dashboard.html"><img src="dashboard.jpg" alt="dashboard" class="icon"> Dashboard</a>
+    <a href="safetytips.html"><img src="safety.jpg" alt="safety" class="icon"> Safety Tips</a>
+    <a href="#"><img src="contact.jpg" alt="contact" class="icon"> Contact</a>
+</div>
+
+<!-- Main Content -->
+<div id="main-content" class="container">
+    <h1 class="page-title">Review Places in Delhi</h1>
+    
+    <label for="place" class="input-label">Select a Place:</label>
+    <select id="place" class="input-field">
+        <option value="">-- Select --</option>
+        <option value="India Gate">India Gate</option>
+        <option value="Qutub Minar">Qutub Minar</option>
+        <option value="Red Fort">Red Fort</option>
+        <option value="Lotus Temple">Lotus Temple</option>
+        <option value="Akshardham Temple">Akshardham Temple</option>
+        <option value="Hauz Khas Village">Hauz Khas Village</option>
+        <option value="Chandni Chowk">Chandni Chowk</option>
+        <option value="Dilli Haat">Dilli Haat</option>
+        <option value="Lodhi Art District">Lodhi Art District</option>
+    </select>
+
+    <label for="review" class="input-label">Write Your Review:</label>
+    <textarea id="review" class="input-field" placeholder="Share your experience..."></textarea>
+    
+    <button class="main-btn" onclick="submitReview()">Submit Review</button>
+
+    <h2 class="section-title">Reviews:</h2>
+    <div id="reviews"></div>
+</div>
+<!-- Footer -->
+<footer>
+    <p>Follow us:  
+        <a href="#"><img src="instagram.jpg" alt="Instagram" class="social-icon"></a> |
+        <a href="#"><img src="X_logo.jpg" alt="X" class="social-icon"></a> |
+        <a href="#"><img src="facebook.jpg" alt="Facebook" class="social-icon"></a>
+    </p>
+</footer>
+
+<script src="review.js"></script>
+</body>
+</html>

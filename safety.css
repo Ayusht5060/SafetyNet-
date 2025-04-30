@@ -1,0 +1,47 @@
+/* Global Reset */
+
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+
+/* Full Page Styling */ body { background: linear-gradient(135deg, #FFDAB3, #C8AAAA, #9F8383); /* Warm pastel gradient for a soft theme / color: #574964; / Deep mauve text for strong contrast */ }
+
+/* Intro Page */ .intro-body { display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+.intro-text { font-size: 2.5rem; color: #574964; /* Dark text for contrast */ animation: fadeOut 2.5s ease-in-out forwards; }
+
+@keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Sidebar */ .sidebar { height: 100%; width: 0; position: fixed; top: 0; left: 0; background: rgba(159, 131, 131, 0.9); /* Soft brownish overlay */ backdrop-filter: blur(12px); transition: width 0.3s ease-in-out; padding-top: 50px; overflow-y: auto; }
+
+.sidebar a { padding: 15px; display: block; color: #574964; font-size: 1.2rem; text-decoration: none; }
+
+.sidebar a:hover { background: rgba(200, 170, 170, 0.6); /* Light hover effect */ }
+
+.close-btn { position: absolute; top: 10px; right: 15px; font-size: 2rem; background: none; border: none; color: #574964; cursor: pointer; }
+
+/* Navbar */ .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: rgba(255, 218, 179, 0.85); /* Light pastel navbar */ backdrop-filter: blur(10px); }
+
+.menu-btn { font-size: 1.8rem; background: none; border: none; color: #574964; cursor: pointer; }
+
+.nav-buttons { display: flex; gap: 10px; }
+
+/* Main Content */ .main-content { transition: margin-left 0.3s ease-in-out; padding: 30px; color: #574964; }
+
+/* Emergency Section */ .emergency-section { margin-top: 20px; background: rgba(200, 170, 170, 0.8); /* Soft mauve background */ backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; text-align: center; color: #574964; }
+
+.emergency-section ul { list-style-type: none; }
+
+.emergency-section li { font-size: 1.2rem; margin: 5px 0; }
+
+/* Footer */ footer { text-align: left; padding: 15px; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(159, 131, 131, 0.9); /* Soft brown tone */ color: #574964; }
+
+footer a { color: #574964; text-decoration: none; }
+
+/* Icons */ .social-icon { width: 24px; height: 24px; vertical-align: middle; transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; filter: brightness(1) saturate(0.9); }
+
+.social-icon:hover { transform: scale(1.2); filter: brightness(1.1) saturate(1.1); }
+
+.icon { width: 50px; height: 50px; vertical-align: middle; transition: transform 0.3s ease-in-out; }
+
+.icon:hover { transform: scale(1.2); }
+

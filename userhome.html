@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="userhome.css">
+    <script src="userhome.js" defer></script>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <a href="dashboard.html"><img src="dashboard.jpg" alt="dashboard" class="icon"> Dashboard</a>
+    <a href="safetytips.html"><img src="safety.jpg" alt="safety" class="icon"> Saftey Tips</a>
+    <a href="test.html"><img src="review.jpg" alt="review" class="icon"> Review</a>
+    <a href="#"><img src="contact.jpg" alt="contact" class="icon"> Contact Us</a>
+</div>
+
+<!-- Main Content Wrapper -->
+<div id="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <h1>SafeGuard</h1>
+        <div class="nav-buttons">
+            <button class="upload-btn" onclick="uploadVideo()">📸</button>
+            <button class="profile-btn">👤</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Self-Defense and Educational Videos</h2>
+        <div class="video-grid">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Floating Buttons -->
+        <button class="floating-btn chatbot-btn" onclick="goToChatbot()">💬</button>
+        <button class="floating-btn complaint-btn" onclick="goToComplaint()">⚠️</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us:
+            <a href="#"><img src="instagram.jpg" alt="Instagram" class="social-icon"></a> |
+            <a href="#"><img src="X_logo.jpg" alt="X" class="social-icon"></a> |
+            <a href="#"><img src="facebook.jpg" alt="Facebook" class="social-icon"></a>
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>

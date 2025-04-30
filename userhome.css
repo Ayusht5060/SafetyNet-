@@ -1,0 +1,40 @@
+/* Global Reset */ *{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+/* Full Page Styling */ body { background: linear-gradient(135deg, #FFDAB3, #C8AAAA); color: #9F8383; transition: margin-left 0.3s ease-in-out; /* Smooth shift effect */ }
+
+/* Intro Page */ .intro-body { display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+.intro-text { font-size: 2.5rem; color: #574964; animation: fadeOut 2.5s ease-in-out forwards; }
+
+@keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Sidebar */ .sidebar { height: 100%; width: 0; /* Initially hidden */ position: fixed; top: 0; left: 0; background: rgba(255, 218, 179, 0.8); /* #FFDAB3 with opacity */ backdrop-filter: blur(10px); transition: 0.3s ease-in-out; padding-top: 50px; overflow-y: auto; }
+
+.sidebar a { padding: 15px; display: block; color: #9F8383; font-size: 1.2rem; text-decoration: none; }
+
+.sidebar a:hover { background: rgba(200, 170, 170, 0.5); /* #C8AAAA with opacity */ }
+
+.close-btn { position: absolute; top: 10px; right: 15px; font-size: 2rem; background: none; border: none; color: #574964; cursor: pointer; }
+
+/* Navbar */ .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: rgba(159, 131, 131, 0.3); /* #9F8383 with opacity */ backdrop-filter: blur(10px); transition: margin-left 0.3s ease-in-out; /* Shift effect */ }
+
+.menu-btn { font-size: 1.8rem; background: none; border: none; color: #574964; cursor: pointer; }
+
+/* Main Content */ #main-content { transition: margin-left 0.3s ease-in-out; /* Moves right when sidebar opens */ padding: 15px; }
+
+/* Hero Section */ .hero { text-align: center; margin: 30px 0; color: #9F8383; }
+
+/* Floating Buttons */ .floating-btn { position: fixed; bottom: 20px; right: 20px; font-size: 1.5rem; border: none; background: #C8AAAA; color: white; padding: 15px; border-radius: 50%; cursor: pointer; }
+
+.complaint-btn { bottom: 80px; background: #9F8383; }
+
+/* Footer */ footer { text-align: left; padding: 15px; position: fixed; bottom: 0; left: 0; color: #574964; }
+
+.social-icon { width: 24px; height: 24px; vertical-align: middle; transition: transform 0.3s ease-in-out; filter: hue-rotate(10deg) brightness(0.9); /* Subtle color adaptation */ }
+
+.social-icon:hover { transform: scale(1.2); }
+
+.icon { width: 50px; /* Adjust icon size */ height: 50px; vertical-align: middle; transition: transform 0.3s ease-in-out; }
+
+.icon:hover { transform: scale(1.2); /* Slight zoom effect on hover */ }
+

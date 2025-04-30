@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Safety Dashboard</title>
+    <!-- Navbar -->
+<nav class="navbar">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1>SafeGuard - Rate & Review</h1>
+    <div class="nav-buttons">
+        <button class="profile-btn">👤</button>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <a href="userhome.html"><img src="homelogo.jpg" alt="home" class="icon"> Home</a>
+    <a href="test.html"><img src="review.jpg" alt="review" class="icon">review</a>
+    <a href="safetytips.html"><img src="safety.jpg" alt="safety" class="icon"> Safety Tips</a>
+    <a href=""><img src="contact.jpg" alt="contact" class="icon"> Contact</a>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9F8383;
+            color: #574964;
+            text-align: center;
+        }.container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: #FFDAB3;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        color: #574964;
+    }
+
+    .chart-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .status {
+        font-size: 20px;
+        font-weight: bold;
+        color: #C8AAAA;
+    }
+
+    .alert {
+        background: #574964;
+        color: #FFDAB3;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+    }
+
+    h1, h2 {
+        color: #574964;
+    }
+    /* Sidebar */ .sidebar { height: 100%; width: 0; 
+    position: fixed; top: 0; 
+    left: 0; background: rgba(159, 131, 131, 0.9); /*Soft muted pinkish background */ backdrop-filter: blur(10px); transition: 0.3s; padding-top: 50px; overflow-y: auto; }
+
+.sidebar a { padding: 15px; display: block; color: #FFDAB3; font-size: 1.2rem; text-decoration: none; }
+
+.sidebar a:hover { background: rgba(87, 73, 100, 0.4); /* Soft dark hover effect */ }
+
+.close-btn { position: absolute; top: 10px; right: 15px; font-size: 2rem; background: none; border: none; color: #FFDAB3; cursor: pointer; }
+
+/* Navbar */ .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: rgba(200, 170, 170, 0.8); /* Light muted pink */ backdrop-filter: blur(10px); }
+
+.menu-btn { font-size: 1.8rem; background: none; border: none; color: #574964; cursor: pointer; }
+
+.nav-buttons { display: flex; gap: 10px; }
+
+.social-icon:hover { transform: scale(1.2); filter: brightness(1.2) saturate(1); }
+
+.icon { width: 50px; height: 50px; vertical-align: middle; transition: transform 0.3s ease-in-out; }
+
+.icon:hover { transform: scale(1.2); }
+
+
+</style>
+
+</head>
+<body><div class="container">
+    <h1>Women's Safety Monitoring Dashboard</h1>
+    
+    <div class="card">
+        <h2>GPS Location</h2>
+        <p id="gps-location">Loading...</p>
+    </div>
+
+    <div class="card">
+        <h2>Heart Rate (BPM)</h2>
+        <canvas id="heartRateChart" class="chart-container"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>Panic Button Status</h2>
+        <p id="panic-status" class="status">No Alert</p>
+        <p class="alert" id="alert-message">🚨 Emergency Alert Activated!</p>
+    </div>
+
+    <div class="card">
+        <h2>Battery Level</h2>
+        <p id="battery-level">Loading...</p>
+    </div>
+</div>
+
+<script>
+    // Simulated Real-time Data (Replace with Firebase Data Fetching)
+    function updateDashboard() {
+        document.getElementById("gps-location").innerText = "Lat: 28.7041, Long: 77.1025"; // Example location
+        document.getElementById("battery-level").innerText = Math.floor(Math.random() * 100) + "%"; // Random battery value
+
+        let heartRate = Math.floor(Math.random() * (120 - 60) + 60); // Simulating heart rate
+        heartRateData.push(heartRate);
+        if (heartRateData.length > 10) heartRateData.shift();
+        heartRateChart.update();
+
+        let panicStatus = Math.random() > 0.8; // Simulating random panic button press
+        document.getElementById("panic-status").innerText = panicStatus ? "🚨 Panic Activated" : "No Alert";
+        document.getElementById("alert-message").style.display = panicStatus ? "block" : "none";
+    }
+
+    // Chart for Heart Rate
+    let heartRateData = [];
+    let ctx = document.getElementById('heartRateChart').getContext('2d');
+    let heartRateChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["", "", "", "", "", "", "", "", "", ""],
+            datasets: [{
+                label: "Heart Rate (BPM)",
+                data: heartRateData,
+                borderColor: "#C8AAAA",
+                backgroundColor: "#FFDAB3",
+                borderWidth: 2,
+                fill: true,
+                pointBackgroundColor: "#574964",
+                pointBorderColor: "#9F8383"
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "#574964"
+                    }
+                }
+            }
+        }
+    });
+
+    setInterval(updateDashboard, 3000); // Update every 3 seconds
+</script>
+
+</body>
+</html>

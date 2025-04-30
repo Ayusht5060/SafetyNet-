@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Chat</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+<div class="container chat-container">
+  <h1>Complaint Chat</h1>
+  <div id="chatBox" class="chat-box">
+    <!-- Chat messages will appear here -->
+  </div>
+  <form id="chatForm">
+    <textarea id="chatMessage" placeholder="Type your message here..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <button id="goToComplaintBox">Go to Complaint Box</button>
+</div>
+  <script>
+    const chatBox = document.getElementById("chatBox");
+    const chatForm = document.getElementById("chatForm");
+    const chatMessage = document.getElementById("chatMessage");
+
+    // Retrieve current complaint from localStorage
+    const currentComplaint = localStorage.getItem("currentComplaint");
+    if (currentComplaint) {
+      const complaintElement = document.createElement("p");
+      complaintElement.textContent = `Complaint: ${currentComplaint}`;
+      chatBox.appendChild(complaintElement);
+    }
+
+    // Handle new chat messages
+    chatForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const message = chatMessage.value;
+      const messageElement = document.createElement("p");
+      messageElement.textContent = `User: ${message}`;
+      chatBox.appendChild(messageElement);
+      chatMessage.value = "";
+    });
+
+    // Redirect to complaint box
+    document.getElementById("goToComplaintBox").addEventListener("click", function () {
+      window.location.href = "complaintuser.html";
+    });
+  </script>
+</body>
+</html>

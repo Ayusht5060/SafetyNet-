@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full page height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFDAB3, #C8AAAA); /* Gradient background */
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 90vh; /* Adjust to nearly full-page height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Complaint Box */
+.complaint-box {
+  flex-grow: 1; /* Expand to fill available space */
+  border: 2px dashed #007bff;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+textarea {
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Prevent resizing */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Chat Box */
+.chat-box {
+  flex-grow: 1; /* Expand the chat box to fill available vertical space */
+  border: 2px solid #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f8ff;
+  max-height: 70%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.chat-box p {
+  margin: 0;
+  padding: 10px;
+  background: #e9f7fd;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering Chat Page */
+.chat-container {
+  height: 90vh; /* Full-page height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#chatForm {
+  display: flex;
+  gap: 10px;
+}
+
+#chatMessage {
+  flex-grow: 1;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#goToComplaintBox {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#goToComplaintBox:hover {
+  background-color: #0056b3;
+}

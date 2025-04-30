@@ -1,0 +1,41 @@
+/* Global Reset */
+
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+
+/* Full Page Styling */ body { display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #FFDAB3, #C8AAAA); }
+
+/* Centered Login Card */ .container { display: flex; justify-content: center; align-items: center; width: 100%; }
+
+/* Login Card */ .login-card { background: rgba(255, 255, 255, 0.2); border-radius: 16px; backdrop-filter: blur(15px); padding: 3rem; width: 600px; box-shadow: 0 15px 35px rgba(159, 131, 131, 0.5); /* #9F8383 with opacity */ text-align: center; border: 1px solid rgba(255, 255, 255, 0.3); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
+
+/* 3D Hover Effect */ .login-card:hover { transform: translateY(-8px); box-shadow: 0 20px 45px rgba(159, 131, 131, 0.7); /* #9F8383 with opacity */ }
+
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+
+/* Heading */ h2 { font-size: 2rem; color: #574964; margin-bottom: 1.5rem; font-weight: bold; }
+
+/* Input Groups */ .input-group { margin-bottom: 1.5rem; text-align: left; }
+
+.input-group label { display: block; font-size: 1rem; font-weight: 600; color: #574964; margin-bottom: 0.5rem; }
+
+.input-group input, .input-group select { width: 100%; padding: 0.8rem; border: none; border-radius: 8px; font-size: 1rem; background: rgba(255, 218, 179, 0.3); /* #FFDAB3 with opacity */ color: #574964; backdrop-filter: blur(10px); transition: 0.3s ease-in-out; }
+
+/* Input Focus Effect */ .input-group input:focus, .input-group select:focus { outline: none; border-bottom: 2px solid #9F8383; box-shadow: 0 0 15px rgba(159, 131, 131, 0.8); /* #9F8383 with opacity */ }
+
+/* Button */ button { background: #C8AAAA; color: white; border: none; padding: 0.9rem; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: 0.3s ease-in-out; font-weight: 700; width: 100%; }
+
+button:hover { background: #9F8383; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(200, 170, 170, 0.5); /* #C8AAAA with opacity */ }
+
+/* Error Message */ #error-message { margin-top: 1rem; color: #FF1744; font-weight: 600; text-align: center; }
+

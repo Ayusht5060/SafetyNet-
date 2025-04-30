@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Complaint Box</title>
+  <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Complaint Box</h1>
+    <div class="complaint-box">
+      <form id="complaintForm">
+        <textarea id="complaintMessage" placeholder="Write your complaint here..." required></textarea>
+        <button type="submit">Submit Complaint</button>
+        <a href="user.html">
+  <button type="button" class="button-3d">Home</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("complaintForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const message = document.getElementById("complaintMessage").value;
+
+      // Store the complaint in localStorage (simulating server-side storage)
+      localStorage.setItem("currentComplaint", message);
+
+      // Redirect to the chat page
+      window.location.href = "chat.html";
+    });
+  </script>
+</body>
+</html>

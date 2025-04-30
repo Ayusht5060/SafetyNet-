@@ -1,0 +1,53 @@
+/* Global Reset */
+
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+
+/* Full Page Styling */ body { background: linear-gradient(135deg, #FFDAB3, #C8AAAA); color: #574964; }
+
+/* Intro Page */ .intro-body { display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+.intro-text { font-size: 2.5rem; color: #574964; animation: fadeOut 2.5s ease-in-out forwards; }
+
+@keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Sidebar */ .sidebar { height: 100%; width: 0; position: fixed; top: 0; left: 0; background: rgba(159, 131, 131, 0.9); /*Soft muted pinkish background */ backdrop-filter: blur(10px); transition: 0.3s; padding-top: 50px; overflow-y: auto; }
+
+.sidebar a { padding: 15px; display: block; color: #FFDAB3; font-size: 1.2rem; text-decoration: none; }
+
+.sidebar a:hover { background: rgba(87, 73, 100, 0.4); /* Soft dark hover effect */ }
+
+.close-btn { position: absolute; top: 10px; right: 15px; font-size: 2rem; background: none; border: none; color: #FFDAB3; cursor: pointer; }
+
+/* Navbar */ .navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: rgba(200, 170, 170, 0.8); /* Light muted pink */ backdrop-filter: blur(10px); }
+
+.menu-btn { font-size: 1.8rem; background: none; border: none; color: #574964; cursor: pointer; }
+
+.nav-buttons { display: flex; gap: 10px; }
+
+/* Adjust Main Content */ .main-content { transition: margin-left 0.3s ease-in-out; padding: 30px; }
+
+.container { width: 80%; height: auto; min-height: 80vh; margin: 100px auto; background: #FFDAB3; padding: 30px; border-radius: 12px; box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2); color: #574964; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+
+/* Review Box */ .review-box { background: #C8AAAA; padding: 30px; border-radius: 10px; margin: 20px 0; box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); text-align: left; border-left: 5px solid #574964; width: 100%; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; font-size: 18px; line-height: 1.5; }
+
+/* Input Fields */ .input-field { width: 100%; padding: 15px; margin-top: 10px; border-radius: 5px; border: 1px solid #9F8383; background: #FFDAB3; color: #574964; font-size: 16px; }
+
+/* Submit Button */ .main-btn { width: 100%; background-color: #574964; color: #FFDAB3; font-size: 18px; font-weight: bold; cursor: pointer; border: none; padding: 15px; border-radius: 5px; transition: 0.3s; margin-top: 20px; }
+
+.main-btn:hover { background-color: #9F8383; }
+
+/* Reviews Section */ #reviews { width: 100%; margin-top: 20px; display: flex; flex-direction: column; align-items: center; }
+
+/* Footer */ footer { text-align: left; padding: 15px; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(159, 131, 131, 0.85); color: #FFDAB3; }
+
+footer a { color: #FFDAB3; text-decoration: none; }
+
+/* Icons */ .social-icon { width: 24px; height: 24px; vertical-align: middle; transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; filter: brightness(1) saturate(0.8); }
+
+.social-icon:hover { transform: scale(1.2); filter: brightness(1.2) saturate(1); }
+
+.icon { width: 50px; height: 50px; vertical-align: middle; transition: transform 0.3s ease-in-out; }
+
+.icon:hover { transform: scale(1.2); }
+
